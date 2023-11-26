@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
@@ -43,9 +44,7 @@ const Blogs = () => {
 
                 <p class="text-gray-700 mt-4">{description}</p>
 
-                <a href="#" class="text-blue-500 mt-4 inline-block">
-                  Read More
-                </a>
+                <Link to="/blog" class="text-blue-500 mt-4 inline-block">Read More</Link>
               </div>
             </div>
           </>

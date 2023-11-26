@@ -11,12 +11,14 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
 } from "react-router-dom";
+import CreateBlog from "./pages/Create/CreateBlog.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route path="" element={<Blogs />} />
-      <Route path="blog" element={<Blog />} />
+      <Route path="blog/:id" element={<Blog />} />
+      <Route path="create-blog" element={<CreateBlog />} />
     </Route>
   )
 );
