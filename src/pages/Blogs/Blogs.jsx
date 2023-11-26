@@ -1,9 +1,11 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
+
+  const navigate = useNavigate();
 
   const fetchBlogs = async () => {
     const response = await axios.get(
@@ -44,8 +46,17 @@ const Blogs = () => {
 
                 <p class="text-gray-700 mt-4">{description}</p>
 
-                <Link to="/blog" class="text-blue-500 mt-4 inline-block">Read More</Link>
+                {/* <Link to="/blog" class="text-blue-500 mt-4 inline-block">Read More</Link> */}
+
+                <p
+                  onClick={() => navigate(`/blog/${blog.id}`)}
+                  class="text-blue-500 mt-4 inline-block"
+                >
+                  {" "}
+                  Read More
+                </p>
               </div>
+              
             </div>
           </>
         );
