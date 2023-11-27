@@ -2,8 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
-import Blogs from "./pages/Blogs/Blogs.jsx"
-import Blog from "./pages/Blog/Blog.jsx"
+import Blogs from "./pages/Blogs/Blogs.jsx";
+import Blog from "./pages/Blog/Blog.jsx";
 
 import {
   Route,
@@ -12,6 +12,7 @@ import {
   createRoutesFromElements,
 } from "react-router-dom";
 import CreateBlog from "./pages/Create/CreateBlog.jsx";
+import EditBlog from "./pages/Edit/EditBlog.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -19,6 +20,7 @@ const router = createBrowserRouter(
       <Route path="" element={<Blogs />} />
       <Route path="blog/:id" element={<Blog />} />
       <Route path="create-blog" element={<CreateBlog />} />
+      <Route path="/edit/:id" element={<EditBlog />} />
     </Route>
   )
 );

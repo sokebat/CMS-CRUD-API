@@ -28,6 +28,8 @@ const Blog = () => {
     }
   };
 
+  
+
   useEffect(() => {
     fetchblog();
   }, []);
@@ -44,7 +46,10 @@ const Blog = () => {
 
       <p className="text-gray-700">{blog?.description}</p>
       <div className="mt-4 flex justify-end">
-        <button className="bg-blue-500 text-white py-2 px-4 rounded-md mr-2 hover:bg-blue-600 focus:outline-none focus:shadow-outline-blue">
+        <button
+          onClick={()=> navigate("/edit/"+id)}
+          className="bg-blue-500 text-white py-2 px-4 rounded-md mr-2 hover:bg-blue-600 focus:outline-none focus:shadow-outline-blue"
+        >
           Update
         </button>
         <button
