@@ -1,10 +1,11 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const Blog = () => {
   const [blog, setblog] = useState();
   const { id } = useParams();
+  const navigate = useNavigate();
 
   const fetchblog = async () => {
     const response = await axios.get(
@@ -14,6 +15,16 @@ const Blog = () => {
     console.log(response.data);
     if (response.status == 200) {
       setblog(response.data);
+    }
+  };
+
+  const deleteBlog = async () => {
+    const response = await axios.delete(
+      `https://6562fbc6ee04015769a6ada1.mockapi.io/blog/${id}`
+    );
+
+    if ((response.status = 200)) {
+      navigate("/");
     }
   };
 
@@ -36,7 +47,10 @@ const Blog = () => {
         <button className="bg-blue-500 text-white py-2 px-4 rounded-md mr-2 hover:bg-blue-600 focus:outline-none focus:shadow-outline-blue">
           Update
         </button>
-        <button className="bg-red-500 text-white py-2 px-4 rounded-md hover:bg-red-600 focus:outline-none focus:shadow-outline-red">
+        <button
+          onClick={deleteBlog}
+          className="bg-red-500 text-white py-2 px-4 rounded-md hover:bg-red-600 focus:outline-none focus:shadow-outline-red"
+        >
           Delete
         </button>
       </div>
