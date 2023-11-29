@@ -13,9 +13,7 @@ const NavBar = () => {
           <NavLink to="/" class="text-white font-bold hover:text-gray-300">
             Blogs
           </NavLink>
-          {/* <NavLink to="/blog" class="text-white font-bold hover:text-gray-300">
-            Blog
-          </NavLink> */}
+          
           <NavLink
             to="/create-blog"
             class="text-white font-bold hover:text-gray-300"

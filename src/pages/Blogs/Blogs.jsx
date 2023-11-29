@@ -28,8 +28,9 @@ const Blogs = () => {
         return (
           <>
             <div
+            onClick={() => navigate(`/blog/${blog.id}`)}
               key={index}
-              class="max-w-md  m-5 bg-white  overflow-hidden rounded-2xl  shadow-xl"
+              class="max-w-md  m-5 bg-white  overflow-hidden rounded-2xl cursor-pointer shadow-xl"
             >
               <img
                 class="w-full h-64 object-cover object-center"
@@ -45,18 +46,14 @@ const Blogs = () => {
                 </p>
 
                 <p class="text-gray-700 mt-4">{description}</p>
-
-                {/* <Link to="/blog" class="text-blue-500 mt-4 inline-block">Read More</Link> */}
-
-                <p
-                  onClick={() => navigate(`/blog/${blog.id}`)}
+                <button
+                  
                   class="text-blue-500 mt-4 inline-block"
                 >
                   {" "}
                   Read More
-                </p>
+                </button>
               </div>
-              
             </div>
           </>
         );

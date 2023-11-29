@@ -7,9 +7,7 @@ function App() {
   return (
     <>
       <NavBar />
-
       <Outlet />
-      {/* <Footer /> */}
     </>
   );
 }
