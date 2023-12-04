@@ -33,8 +33,9 @@ This project is built using the following key packages:
 To set up the project locally, follow these steps:
 
 1. Clone the repository: `git clone https://github.com/sokebat/CMS-CRUD-API.git`
-2. Navigate to the project directory: `cd your-repo`
+2. Navigate to the project directory: `cd CMS-CRUD-API`
 3. Install dependencies: `npm install`
+
 
 ## Usage
 
