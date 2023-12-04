@@ -3,20 +3,20 @@ import { Link, NavLink } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <nav class="bg-blue-400 p-4">
-      <div class="container mx-auto flex items-center justify-between">
-        <Link to="/" class="text-white text-lg font-bold">
-          Your Logo
+    <nav className="bg-blue-400 p-4">
+      <div className="container mx-auto flex items-center justify-between">
+        <Link to="/" className="text-white text-3xl font-bold  hover:text-zinc-400">
+          CMS
         </Link>
 
-        <div class="space-x-4">
-          <NavLink to="/" class="text-white font-bold hover:text-gray-300">
+        <div className="space-x-4">
+          <NavLink to="/" className="text-white font-bold hover:text-zinc-300">
             Blogs
           </NavLink>
-          
+
           <NavLink
             to="/create-blog"
-            class="text-white font-bold hover:text-gray-300"
+            className="text-white font-bold hover:text-zinc-400"
           >
             Create
           </NavLink>

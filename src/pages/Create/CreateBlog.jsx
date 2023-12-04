@@ -8,7 +8,6 @@ const CreateBlog = () => {
   const [image, setImage] = useState();
   const navigate = useNavigate();
 
-  
   const createBlog = async (e) => {
     e.preventDefault();
     // const data = { title: title, description: description, avatar: image };
